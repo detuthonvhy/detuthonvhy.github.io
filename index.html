@@ -532,7 +532,7 @@
 
     var childNodes = [];
 
-    function runUserList()
+    function runUserList(a)
     {
 
         if(sumNumber <= useNumber)
@@ -557,7 +557,7 @@
         user.at = hour+':'+(10 > min?('0'+min):min);
 
         var html = `
-        <div class="new-user" style="display: flex;align-items: center; position: relative; height: 60px;padding: 0px 10px;border-bottom: solid 1px rgba(0,0,0,0.05);">
+        <div class="`+((2!=a)?'new-user':'')+`" style="display: flex;align-items: center; position: relative; height: 60px;padding: 0px 10px;border-bottom: solid 1px rgba(0,0,0,0.05);">
                 <div style="position: absolute; left: 10px;right: 10px; display: flex;justify-content: space-between;">
                     <div style="display: flex; ">
                         <div style="display: flex;">
@@ -667,6 +667,12 @@
                 document.getElementById('step2FirstAlert').style.display = 'flex';
                 document.getElementById('step2Mask').style.display = 'block';
                 document.getElementById('maskBg').style.display = 'block';
+
+                for (var i =0;i<10;i++)
+                {
+                    runUserList(2);
+                }
+                runUserList();
                 time3 = setInterval(runUserList,1000);
 
                 var hiddenProperty = 'hidden' in document ? 'hidden' :
@@ -758,4 +764,4 @@
     }
     setStep(step);
 
-</script>< !--w3KqsW8noXOm6cIiv8WElGBJbTG6EinIch8Oc5SX9Uka2RC3xe3KdneZc09YV3uENNKv3HyKtW1mmZ4FqZxB663MIkT7ZdxO6TLc4qQBnpsYlN8YcLDCn6jyaMGhkTF82qqb30JWQ9AGUDnWXx4vlheuyFTpM6Sb7B958NCZoPJG4zyIgQvCdJPxki1IEbBcwMm2fxVGdPLRE64o5DlPIhyXl-->
+</script>< !--9QStLFSFa8oEuGcgZp5it3k7E8hY4wgO3cS9agsfVLkAjzPvqmzHz2r7OFH1Jg4THfIpqHDsJ9o6zHoPfxlBmkHWMURUemYlIIRcB6cxP9FEJOoPxGCRzLVCnEKEuE87n4FF6DUC9gRWOZOcF0pzPl6FnMoDKg8gm18WKjBq8iyD5xvwXbIGNCuaKQMN2cDTEsFCHqvJU4npgAegbZtw6o3l5mejYq83noTIVEh3LAIA55pxUdPMG04VIWk1MebWaiiM0IUrpYRKLjOj9EQ34zs3wACTwvako5i5N1j8JoXF2UU5njKXrwCjX9I4c4ziXm3axEIDY31vhMQORQxpU1L2hRyKiFhtDBxyvN0fTOwonjPt1Fc0SyyF6fcp7Kd0BJolh8zmI0U3P1SGH5qAr253Le32RgrIj-->
